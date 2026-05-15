@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2.- Fases del proceso: el análisis | Tarea 4 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Francisco Javier Vargas García" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 Portable - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Tarea 4</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Programación</a></li>
+   <li class="current-page-parent"><a href="1_compiladores.html" class="current-page-parent daddy">1.- Compiladores</a>
+   <ul>
+      <li><a href="11_introduccin_a_la_compilacin.html" class="no-ch">1.1.- Introducción a la compilación</a></li>
+      <li id="active"><a href="12_fases_del_proceso_el_anlisis.html" class="active no-ch">1.2.- Fases del proceso: el análisis</a></li>
+      <li><a href="13_la_generacin_de_cdigo.html" class="no-ch">1.3.- La generación de código</a></li>
+      <li><a href="14_herramientas_y_errores_comunes.html" class="no-ch">1.4.- Herramientas y errores comunes</a></li>
+   </ul>
+   </li>
+   <li><a href="2_apartado_2.html" class="daddy">2.- Apartado 2</a>
+   <ul class="other-section">
+      <li><a href="21_subapartado_1_del_segundo_apartado.html" class="no-ch">2.1.- Subapartado 1 del segundo apartado</a></li>
+      <li><a href="22_subapartado_2_del_segundo_apartado.html" class="no-ch">2.2.- Subapartado 2 del segundo apartado</a></li>
+      <li><a href="23_subapartado_3_del_segundo_apartado.html" class="no-ch">2.3.- Subapartado 3 del segundo apartado</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_introduccin_a_la_compilacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_la_generacin_de_cdigo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2.- Fases del proceso: el análisis</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_170" class="block iDevice_content">
+<p>Antes de generar el archivo final, el compilador divide su trabajo en fases. La primera es el análisis, donde se comprueba que el código esté bien escrito, no falten puntos y coma, y las variables existan.</p>
+<p>El compilador debe realizar 3 tipos de análisis (<abbr title="Análisis Lexicográfico">ALX</abbr>, <abbr title="Análisis Sintáctico">AST</abbr> y <abbr title="Análisis Semántico">ASM</abbr>) antes de pasar a la siguiente fase de síntesis donde, de no existir errores, obtenemos el código máquina u objeto.</p>
+<table border="0" style="height: 84px; width: 80.0201%; border-style: solid;" class="tabla"><caption>Tipos de análisis</caption>
+<tbody>
+<tr style="height: 10px;">
+<th style="width: 27.2545%; height: 10px; background-color: #b0a7a7;">Análisis</th>
+<th style="width: 72.7455%; height: 10px; background-color: #b0a7a7;">Características</th>
+</tr>
+<tr style="height: 24px;">
+<td style="width: 27.2545%; height: 24px;">Lexicográfico</td>
+<td style="width: 72.7455%; height: 24px;">Comprueba que el código fuente está escrito correctamente.</td>
+</tr>
+<tr style="height: 27px;">
+<td style="width: 27.2545%; height: 27px;">Sintáctico</td>
+<td style="width: 72.7455%; height: 27px;">Verifica que los elementos obtenidos en el ALX se relacionan respetando la sintaxis del lenguaje de programación utilizado.</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 27.2545%; height: 23px;">Semántico</td>
+<td style="width: 72.7455%; height: 23px;">Asegura que el código fuente, además de estar bien escrito y respetar las reglas de sintaxis del lenguaje usado, tiene sentido. </td>
+</tr>
+</tbody>
+</table>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id7">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta7_167" class="block iDevice_content">
+<p><strong>¡Importante!</strong></p>
+<p>El análisis léxicográfico y sintáctico detecta errores de escritura, pero no asegura que el programa haga lo que tú quieres (lógica).</p>
+<p>El análisis semántico detecta situaciones de inconsistencia tal como sucede con este texto: <em>Los elefantes bebían neumáticos</em>. Todo, aparentemente, es correcto, tanto lexicográfica como sintácticamente, pero nos chirría porque falla la semántica (los neumáticos no tienen el atributo o cualidad de ser bebibles).</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id8">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-8_157" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion8_157" class="block question iDevice_content">
+<p>¿Cómo se llama el error que ocurre cuando te olvidas de cerrar una llave { en el código?</p>
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint8_157" class="block iDevice_content">
+<p>Tiene que ver con lo que aprendiste y practicaste en la asignatura de Lengua.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_160" class="sr-av"><a href="#answer-8_160">Opción 1</a></label><input type="radio" name="option8_157" id="i8_160" class="exe-radio-option exe-radio-option-0-3-8_157-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_160"><div id="taans8_160" class="block iDevice_content">
+<p>Error de ejecución.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_238" class="sr-av"><a href="#answer-8_238">Opción 2</a></label><input type="radio" name="option8_157" id="i8_238" class="exe-radio-option exe-radio-option-1-3-8_157-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_238"><div id="taans8_238" class="block iDevice_content">
+<p>Error de sintaxis.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i8_241" class="sr-av"><a href="#answer-8_241">Opción 3</a></label><input type="radio" name="option8_157" id="i8_241" class="exe-radio-option exe-radio-option-2-3-8_157-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-8_241"><div id="taans8_241" class="block iDevice_content">
+<p>Error lógico.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b8_157" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+<section id="sa1b8_157" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa2b8_157" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-8_160">Incorrecto</a><span> (<a href="#sa0b8_157">Retroalimentación</a>)</span></li>
+<li><a href="#answer-8_238">Opción correcta</a><span> (<a href="#sa1b8_157">Retroalimentación</a>)</span></li>
+<li><a href="#answer-8_241">Incorrecto</a><span> (<a href="#sa2b8_157">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_introduccin_a_la_compilacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_la_generacin_de_cdigo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>

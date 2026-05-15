@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Introducción a la compilación | Tarea 4 </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Francisco Javier Vargas García" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 Portable - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Tarea 4</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Programación</a></li>
+   <li class="current-page-parent"><a href="1_compiladores.html" class="current-page-parent daddy">1.- Compiladores</a>
+   <ul>
+      <li id="active"><a href="11_introduccin_a_la_compilacin.html" class="active no-ch">1.1.- Introducción a la compilación</a></li>
+      <li><a href="12_fases_del_proceso_el_anlisis.html" class="no-ch">1.2.- Fases del proceso: el análisis</a></li>
+      <li><a href="13_la_generacin_de_cdigo.html" class="no-ch">1.3.- La generación de código</a></li>
+      <li><a href="14_herramientas_y_errores_comunes.html" class="no-ch">1.4.- Herramientas y errores comunes</a></li>
+   </ul>
+   </li>
+   <li><a href="2_apartado_2.html" class="daddy">2.- Apartado 2</a>
+   <ul class="other-section">
+      <li><a href="21_subapartado_1_del_segundo_apartado.html" class="no-ch">2.1.- Subapartado 1 del segundo apartado</a></li>
+      <li><a href="22_subapartado_2_del_segundo_apartado.html" class="no-ch">2.2.- Subapartado 2 del segundo apartado</a></li>
+      <li><a href="23_subapartado_3_del_segundo_apartado.html" class="no-ch">2.3.- Subapartado 3 del segundo apartado</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_compiladores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_fases_del_proceso_el_anlisis.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.- Introducción a la compilación</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice em_iDevice_casopracticofpd" id="id0">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_163" class="block iDevice_content">
+<p><span>Estás escribiendo tu primer programa en C++. Al darle al botón "Ejecutar", el IDE (entorno integrado de desarrollo) te muestra una lista de errores que no entiendes. Una compañera te dice: "Es que el código fuente no es lo que el ordenador lee directamente, primero hay que pasar por el compilador".</span></p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 406px;">
+<div class="figcaption header"><span style="font-size: 10pt;"><strong>Código fuente</strong></span></div>
+<img src="computer-program-coding-screen.jpg" alt="Codificación de programas informáticos en la pantalla" title="Codificación de programas informáticos en la pantalla" width="406" height="304" style="vertical-align: middle;" />
+<figcaption class="figcaption"><span class="author">rawpixel.com</span>. <a href="https://www.freepik.es/foto-gratis/codificacion-programas-informaticos-pantalla_18415585.htm#fromView=search&amp;page=1&amp;position=0&amp;uuid=07ba8ba7-e3a2-4f4d-8660-76063b5b4e52&amp;query=compilador" target="_blank" class="title" rel="noopener"><em>Designed by Freepik</em></a> <span class="license"><span class="sep">(</span><span class="custom-license">Licencia Gratuita Freepik</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p><span>¿Qué crees que hace exactamente ese "compilador" con el texto que has escrito?</span></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id6">
+<div class="iDevice emphasis0">
+<div id="ta6_170" class="block iDevice_content">
+<p>La compilación es el proceso de traducción de un código fuente (escrito en un lenguaje de alto nivel, como C, Java o C#) a un código de bajo nivel o código máquina que el procesador pueda ejecutar. Sin este proceso, el <em><span lang="en">hardware</span></em> sería incapaz de interpretar nuestras instrucciones.</p>
+<ul>
+<li class=" lista_verificacion">Editor de texto</li>
+<li class=" lista_verificacion">Código fuente</li>
+<li class=" lista_verificacion">Compilador</li>
+<li class=" lista_verificacion">Código objeto/máquina</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice em_iDevice_reflexionfpd" id="id2">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_137" class="block iDevice_content">
+<p>¿Sería posible que un ordenador ejecutara directamente un archivo .cpp o .java sin ningún software de por medio? Piensa en la diferencia entre el lenguaje humano y el binario.</p>
+<p></p>
+<blockquote class="exe-quote-cite styled-qc">
+<p>Todo el mundo en este país debería aprender a programar un ordenador, porque eso te enseña a pensar.</p>
+<cite>Steve Jobs</cite></blockquote>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Reconocimiento No comercial Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_compiladores.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_fases_del_proceso_el_anlisis.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_fpd_js.js"></script></body></html>
